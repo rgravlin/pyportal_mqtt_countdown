@@ -198,17 +198,20 @@ while True:
     if (time.monotonic() - last) >= 1 and enabled == True:
         last = time.monotonic() # always set this immediately
         set_neo_hex('0D00FF')
+
+        # rollover after one minute
         if seconds < 0:
             seconds = 59
             minutes -= 1
 
+        # TODO: implement negative counter
         if minutes == 0 and seconds == 0:
             victorypose()
 
-        # pyportal.set_background(countdown_background)
+        # update our text areas with the new values
         text_areas[0].text = '{:02}'.format(minutes)
         text_areas[1].text = '{:02}'.format(seconds)
-        text_areas[2].text = '{:>1}'.format(":")
+        text_areas[2].text = '{:1}'.format(":")
 
         # increment our second counter
         seconds -= 1
