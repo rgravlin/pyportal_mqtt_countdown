@@ -14,3 +14,7 @@
 ## Upcoming Feature
 
 * Continue to count after timer finishes, as a negative counter (to continue discussion, but know how much time is being spent)
+
+## Demonstration
+
+[![pyPortal MQTT Timer](https://img.youtube.com/vi/3SaQ1H5RXSc/0.jpg)](https://www.youtube.com/watch?v=3SaQ1H5RXSc)
